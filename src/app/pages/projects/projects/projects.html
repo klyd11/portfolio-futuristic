@@ -1,0 +1,25 @@
+
+    <div class="container">
+      <h1 class="page-title">// ASSIGNED_PROJECTS</h1>
+      <div class="grid">
+        <mat-card class="project-card" *ngFor="let p of projects" [routerLink]="['/projects', p.id]" appearance="outlined">
+          <div class="card-image" [style.backgroundImage]="'url(' + p.image + ')'">
+            <div class="overlay">VIEW_MODULE</div>
+          </div>
+          <mat-card-content>
+            <mat-chip-set aria-label="Technology stack">
+              <mat-chip *ngFor="let tech of p.tech">{{ tech }}</mat-chip>
+            </mat-chip-set>
+            <h2>{{ p.title }}</h2>
+            <p>{{ p.description }}</p>
+          </mat-card-content>
+          <mat-card-actions align="end">
+            <span class="status">STATUS: DEPLOYED</span>
+            <span class="action-spacer"></span>
+            <button mat-icon-button aria-label="View project">
+              <mat-icon>arrow_forward</mat-icon>
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>

@@ -1,0 +1,59 @@
+
+    <div class="profile-container">
+      <div class="profile-grid">
+        <mat-card class="cyber-panel sidebar" appearance="outlined">
+          <mat-card-content>
+            <div class="avatar-stub">JG</div>
+            <h2>Jeffrey Gutierrez</h2>
+            <p class="title">Senior Software Engineer</p>
+            <mat-divider></mat-divider>
+            <ul class="contact-info">
+              <li><mat-icon aria-hidden="true">location_on</mat-icon><span>Mabalacat City, PH</span></li>
+              <li><mat-icon aria-hidden="true">alternate_email</mat-icon><span>jeffrey-gutierrez&#64;hotmail.com</span></li>
+              <li><mat-icon aria-hidden="true">call</mat-icon><span>(+63) 9204613250</span></li>
+            </ul>
+            <div class="skills-section">
+              <h3>// CORE_STACK</h3>
+              <mat-chip-set aria-label="Core stack">
+                <mat-chip *ngFor="let skill of skills">{{ skill }}</mat-chip>
+              </mat-chip-set>
+            </div>
+            <div class="skills-section">
+              <h3>// OTHERS</h3>
+              <mat-chip-set aria-label="Social media links">
+                <mat-chip>
+                  <a href="https://www.linkedin.com/in/jeffrey-gutierrez" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                </mat-chip>
+                <mat-chip>
+                  <a href="/assets/Jeffrey_Gutierrez_CV.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
+                </mat-chip>
+              </mat-chip-set>
+            </div>
+          </mat-card-content>
+        </mat-card>
+
+        <mat-card class="cyber-panel main-content" appearance="outlined">
+          <mat-card-content>
+            <section>
+              <h3>// EXECUTIVE_SUMMARY</h3>
+              <p class="summary-text">
+                Performance-driven, resourceful and dedicated Senior Software Engineer with 18 years of experience in Software Development.
+                Technically strong in Full Stack Web development with extensive knowledge in Blockchain platforms, Smart Contracts, and scalable data systems.
+              </p>
+            </section>
+
+            <section class="experience-timeline">
+              <h3>// DEPLOYMENT_HISTORY</h3>
+
+              <article class="timeline-item" *ngFor="let item of timeline">
+                <div class="time-header">
+                  <span class="company">{{ item.company }}</span>
+                  <span class="date">{{ item.date }}</span>
+                </div>
+                <p class="details">{{ item.details }}</p>
+              </article>
+            </section>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>

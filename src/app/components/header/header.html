@@ -1,0 +1,18 @@
+<mat-toolbar class="neon-header">
+      <a class="logo" routerLink="/projects" aria-label="CORE OS home">
+        <mat-icon aria-hidden="true">memory</mat-icon>
+        <span class="glitch" data-text="CORE_OS">CORE_OS</span>
+      </a>
+      <span class="spacer"></span>
+      <nav aria-label="Main navigation">
+        <a mat-button routerLink="/projects" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">
+          <mat-icon aria-hidden="true">dashboard</mat-icon>
+          <span>Projects</span>
+        </a>
+        <a mat-button routerLink="/profile" routerLinkActive="active-link">
+          <mat-icon aria-hidden="true">accessibility</mat-icon>
+          <span>Profile</span>
+        </a>
+
+      </nav>
+    </mat-toolbar>

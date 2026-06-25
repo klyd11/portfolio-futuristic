@@ -1,0 +1,97 @@
+.container {
+      padding: clamp(1rem, 4vw, 3rem);
+      min-height: 80vh;
+    }
+    .page-title {
+      color: #fff;
+      font-size: clamp(1.4rem, 5vw, 2rem);
+      margin: 0 0 2rem;
+      letter-spacing: 0.1rem;
+      text-shadow: 0 0 10px rgba(255,255,255,0.1);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr));
+      gap: clamp(1rem, 3vw, 2.5rem);
+    }
+    .project-card {
+      background: var(--panel-strong);
+      border: 1px solid rgba(0, 243, 255, 0.15);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      border-color: #00f3ff;
+      box-shadow: 0 5px 25px rgba(0, 243, 255, 0.25);
+    }
+    .card-image {
+      min-height: 180px;
+      aspect-ratio: 16 / 9;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 243, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: 0.3s;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.1rem;
+    }
+    .project-card:hover .overlay {
+      opacity: 1;
+      backdrop-filter: blur(3px);
+    }
+    mat-card-content {
+      padding: 1.35rem 1.35rem 0;
+    }
+    mat-chip {
+      --mdc-chip-label-text-color: #00f3ff;
+      --mdc-chip-elevated-container-color: rgba(0, 243, 255, 0.1);
+      --mdc-chip-outline-color: rgba(0, 243, 255, 0.28);
+      font-size: 0.75rem;
+    }
+    h2 {
+      color: #fff;
+      margin: 1rem 0 0.55rem;
+      font-size: 1.25rem;
+      line-height: 1.25;
+      letter-spacing: 0.04rem;
+    }
+    p {
+      color: #a4b3c6;
+      font-size: 0.95rem;
+      line-height: 1.55;
+      margin: 0;
+    }
+    mat-card-actions {
+      padding: 0.5rem 1rem 1rem;
+    }
+    .status {
+      color: #00f3ff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.04rem;
+    }
+    .action-spacer {
+      flex: 1;
+    }
+    button[mat-icon-button] {
+      color: #00f3ff;
+    }
+    @media (max-width: 520px) {
+      .container {
+        padding-inline: 0.85rem;
+      }
+      mat-card-content {
+        padding-inline: 1rem;
+      }
+    }

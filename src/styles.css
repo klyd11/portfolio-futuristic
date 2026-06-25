@@ -1,0 +1,60 @@
+@import '@angular/material/prebuilt-themes/cyan-orange.css';
+
+:root {
+  color-scheme: dark;
+  --bg: #03040b;
+  --panel: rgba(11, 13, 33, 0.84);
+  --panel-strong: rgba(16, 18, 43, 0.9);
+  --cyan: #00f3ff;
+  --pink: #ff007f;
+  --green: #39ff14;
+  --text: #ffffff;
+  --muted: #a4b3c6;
+  --dim: #65748a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Roboto, "Segoe UI", Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+}
+
+.mat-mdc-card {
+  --mdc-elevated-card-container-shape: 6px;
+}
+
+.mat-mdc-standard-chip {
+  --mdc-chip-container-shape-radius: 4px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--cyan);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--pink);
+}
