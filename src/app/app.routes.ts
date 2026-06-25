@@ -8,5 +8,5 @@ export const routes: Routes = [
   { path: 'projects', component: ProjectsComponent },
   { path: 'projects/:id', component: ProjectDetailComponent },
   { path: 'profile', component: ProfileComponent },
-  { path: '**', redirectTo: 'projects' }
+  { path: '**', redirectTo: 'profile' }
 ];

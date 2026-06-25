@@ -21,7 +21,13 @@ export class ProfileComponent {
     'TypeScript',
     'Go Lang',
     'Hyperledger Fabric',
-    'PostgreSQL'
+    'PostgreSQL',
+    'AWS Cloud Services',
+    'Azure Cloud Services',
+    'Agile Methodologies',
+    'RESTful API Development',
+    'Microservices Architecture',
+    'AI Integration',
   ];
 
   timeline = [
